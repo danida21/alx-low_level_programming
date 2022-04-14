@@ -1,30 +1,30 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * print_square - entry point
+ * main - entry point
  *
- * Description: Prints square
- *@size: size of square
+ * Description: prints FizzBuzz
+ *
  * Return: void
  */
-
-void print_square(int size)
+int main(void)
 {
-	int row, column;
+	int n;
 
-	if (size <= 0)
+	for (n = 1; n <= 100; n++)
 	{
-		_putchar('\n');
+		if ((n % 3 == 0) && (n % 5 == 0))
+			printf("FizzBuzz");
+		else if (n % 5 == 0)
+			printf("Buzz");
+		else if (n % 3 == 0)
+			printf("Fizz");
+		else
+			printf("%i", n);
+
+		if (n < 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	else
-	{
-		for (row = 1; row <= size; row++)
-		{
-			for (column = 1; column <= size; column++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
-	}
+	return (0);
 }
