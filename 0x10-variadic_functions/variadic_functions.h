@@ -22,4 +22,4 @@ void print_strings(const char *separator, const unsigned int n, ...);
 /* prints anything */
 void print_all(const char * const format, ...);
 
-#endif  /* MAIN_HEADER */
+#endif /* MAIN_HEADER */
